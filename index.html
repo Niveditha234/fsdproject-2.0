@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Haven</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3efe2;
+            color: #4b382a;
+        }
+
+        /* Header */
+        header {
+            background-color: #7b4a12;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #583614;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #7b4a12;
+        }
+
+        /* Sections */
+        section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        #menu {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        #about, #contact {
+            background-color: #ffedd5;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        h2 {
+            color: #7b4a12;
+        }
+
+        button {
+            background-color: #7b4a12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #583614;
+        }
+
+        footer {
+            background-color: #583614;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Coffee Haven</h1>
+        <p>Your cozy spot for the best coffee in town!</p>
+    </header>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <ul id="menu-list">
+            <li>Espresso - ₹249</li>
+            <li>Latte - ₹374</li>
+            <li>Cappuccino - ₹332</li>
+            <li>Mocha - ₹415</li>
+            <li>Pastries - ₹208</li>
+        </ul>
+        <button onclick="addSpecial()">Add Today's Special</button>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Coffee Haven, we believe in crafting the perfect cup of coffee to brighten your day. Come visit us for a cozy atmosphere and exceptional service.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: info@coffeehaven.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: 123 Brew Street, Bean Town, India</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Coffee Haven. All rights reserved.</p>
+    </footer>
+    <script>
+        function addSpecial() {
+            const menuList = document.getElementById('menu-list');
+            const specialItem = document.createElement('li');
+            specialItem.textContent = "Pumpkin Spice Latte - ₹457 (Special!)";
+            specialItem.style.color = "green";
+            specialItem.style.fontWeight = "bold";
+            menuList.appendChild(specialItem);
+        }
+    </script>
+</body>
+</html>
